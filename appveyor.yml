@@ -4,11 +4,11 @@ install:
   - node --version
   - npm --version
   - npm install
-  - npm install hexo-cli -g
   - cinst emacs
+  - emacs --version
   - where emacs
 
 build_script:
+  - node -e "console.log(\"------------------------------------------------------------\")"
   - npm test
   - ls -l hexo-org-cache
-
