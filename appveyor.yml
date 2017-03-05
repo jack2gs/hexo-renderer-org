@@ -1,5 +1,9 @@
 clone_depth: 5
 
+platform:
+  - x86
+  - x64
+
 install:
   - node --version
   - npm --version
@@ -8,7 +12,13 @@ install:
   - emacs --version
   - where emacs
 
-build_script:
-  - node -e "console.log(\"------------------------------------------------------------\")"
+test_script:
   - npm test
   - ls -l hexo-org-cache
+
+# Don't actually build.
+build: off
+
+cache:
+  # local npm modules
+  - node_modules -> package.json
