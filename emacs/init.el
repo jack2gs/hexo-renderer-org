@@ -116,9 +116,10 @@ ARGS:
         (user-config  (or (plist-get args :user-config)      ""))
         (debug-file   (or (plist-get args :debug-file)       "")))
 
+
     (with-temp-buffer
       (insert "Hi")
-      (write-region (point-min) (point-max) debug-file)
+      (write-region (point-min) (point-max) (expand-file-name debug-file))
       (kill-buffer))
 
     ;; use emacs's htmlize to syntax highlight source code
@@ -137,11 +138,11 @@ ARGS:
 
     ;; export file content by ox-hexo.el
     (with-temp-buffer
-      (insert-file-contents file)
+      (insert-file-contents (expand-file-name file))
       ;; fix for org-mode 8.x file under org-mode 9.x
       (org-mode/8.x->9.x-fix)
       (org-hexo-export-as-html)
-      (write-region (point-min) (point-max) output-file)
+      (write-region (point-min) (point-max) (expand-file-name output-file))
       (kill-buffer))
 
     ;; done and done, exit emacs now
