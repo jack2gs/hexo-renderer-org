@@ -14,7 +14,8 @@ describe('Org renderer', function() {
         export_cfg: '',
         //common: '#+OPTIONS: html-postamble:nil'
         common: '',
-        cachedir: './hexo-org-cache/',
+        //cachedir: './hexo-org-cache/',
+        cachedir: path.join(process.cwd(), "hexo-org-cache"),
         theme: 'tango',
         debug: true
       }
