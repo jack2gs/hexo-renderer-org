@@ -1,0 +1,15 @@
+clone_depth: 5
+
+install:
+  - node --version
+  - npm --version
+  - npm install
+  - npm install hexo-cli -g
+  - cinst emacs
+  - where emacs
+
+build_script:
+  - hexo clean
+  - hexo generate --debug
+  - ls -l hexo-org-cache
+  - ls -l public
