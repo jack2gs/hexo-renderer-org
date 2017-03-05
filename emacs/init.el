@@ -113,7 +113,13 @@ ARGS:
         (output-file  (or (plist-get args :output-file)      ""))
         (htmlize      (or (plist-get args :htmlize)      "true"))
         (theme        (or (plist-get args :theme)            ""))
-        (user-config  (or (plist-get args :user-config)      "")))
+        (user-config  (or (plist-get args :user-config)      ""))
+        (debug-file   (or (plist-get args :debug-file)       "")))
+
+    (with-temp-buffer
+      (insert "Hi")
+      (write-region (point-min) (point-max) debug-file)
+      (kill-buffer))
 
     ;; use emacs's htmlize to syntax highlight source code
     (when (string-equal htmlize "true")
