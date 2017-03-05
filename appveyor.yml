@@ -8,12 +8,13 @@ install:
   - node --version
   - npm --version
   - npm install
+  - npm install -g cross-env
   - cinst emacs
   - emacs --version
   - where emacs
 
 test_script:
-  - npm test
+  - cross-env NODE_ENV=test npm test
   - ls -l hexo-org-cache
 
 # Don't actually build.
