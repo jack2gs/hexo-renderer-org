@@ -119,7 +119,7 @@ ARGS:
 
     (with-temp-buffer
       (insert "Hi")
-      (write-region (point-min) (point-max) debug-file)
+      (write-region (point-min) (point-max) (convert-standard-filename debug-file))
       (kill-buffer))
 
     ;; use emacs's htmlize to syntax highlight source code
