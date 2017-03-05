@@ -9,7 +9,6 @@ install:
   - where emacs
 
 build_script:
-  - hexo clean
-  - hexo generate --debug
+  - npm test
   - ls -l hexo-org-cache
-  - ls -l public
+
