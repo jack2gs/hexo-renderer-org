@@ -1,6 +1,7 @@
 'use strict';
 
 var should = require('chai').should();
+var path = require('path');
 
 describe('Org renderer', function() {
   this.timeout(100000);
@@ -24,7 +25,7 @@ describe('Org renderer', function() {
   // org-html-postamble contains time and version info which is not easy to test
   it('rendering simple-test.org with org-html-postamble', function(){
     var data = {
-      path: `${process.cwd()}/test/org/simple-test.org`,
+      path: path.join(process.cwd(), "test", "org", "simple-test.org"),
       text: 'test' // did nothing
     };
 
