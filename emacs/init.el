@@ -24,6 +24,8 @@
 
 ;;; Bootstrap
 
+(setq debug-on-error t)
+
 (defvar init-path
   (file-name-directory (or load-file-name (buffer-file-name)))
   "This init.el file path.")
@@ -119,7 +121,7 @@ ARGS:
 
     (with-temp-buffer
       (insert "Hi")
-      (write-region (point-min) (point-max) (convert-standard-filename debug-file))
+      (write-region (point-min) (point-max) debug-file)
       (kill-buffer))
 
     ;; use emacs's htmlize to syntax highlight source code

@@ -10,7 +10,8 @@ describe('Org renderer', function() {
   var ctx = {
     config: {
       org: {
-        emacs: 'C:/ProgramData/chocolatey/bin/emacs.exe',
+        emacs: 'emacs',
+        //emacs: 'C:/ProgramData/chocolatey/bin/emacs.exe',
         export_cfg: '',
         //common: '#+OPTIONS: html-postamble:nil'
         common: '',
