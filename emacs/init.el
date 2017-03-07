@@ -74,12 +74,12 @@ Output-File: (will be convert to JSON-format)
 (require 'package)                      ; built-in since emacs24
 
 ;; Extra package repos
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
+;; (add-to-list 'package-archives
+;;              '("melpa" . "https://melpa.org/packages/") t)
 
 ;; For important compatibility libraries like cl-lib
-(when (< emacs-major-version 24)
-  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
+;; (when (< emacs-major-version 24)
+;;   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
 
 ;; This must come before configurations of installed packages.
 ;; Don't delete this line. If you don't want it, just comment it out by adding a
@@ -88,12 +88,13 @@ Output-File: (will be convert to JSON-format)
 (package-initialize)
 
 ;; Auto refresh packages info when no archive available.
-(when (not package-archive-contents)
-  (package-refresh-contents))
+;; (when (not package-archive-contents)
+;;   (package-refresh-contents))
 
 ;; Install deps packages
 (package-install 'org)                      ; Installed by packages.el
-(package-install 'htmlize)                  ; Installed by packages.el
+;; (package-install 'htmlize)
+                                        ; Installed by packages.el
 
 ;;;; Code:
 (require 'org)
@@ -169,9 +170,9 @@ ARGS:
         (user-config  (or (plist-get args :user-config)      "")))
 
     ;; Use emacs's htmlize to syntax highlight source code
-    (when (string-equal htmlize "true")
-      (require 'htmlize)
-      (setq org-src-fontify-natively t))
+    ;; (when (string-equal htmlize "true")
+    ;;   (require 'htmlize)
+    ;;   (setq org-src-fontify-natively t))
 
     ;; Load theme if specify
     (unless (string-equal theme "")

@@ -12,7 +12,7 @@ install:
   - cinst emacs
   - emacs --version
   - where emacs
-  - C:\ProgramData\chocolatey\bin\emacs.exe -Q --batch -f toggle-debug-on-error --eval "(setq package-archives '((\"melpa\" . \"https://melpa.org/packages/\")))" --eval "(package-refresh-contents)"
+  #- C:\ProgramData\chocolatey\bin\emacs.exe -Q --batch -f toggle-debug-on-error --eval "(setq package-archives '((\"melpa\" . \"https://melpa.org/packages/\")))" --eval "(package-refresh-contents)"
 
 test_script:
   - cross-env NODE_ENV=test npm test
