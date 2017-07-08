@@ -114,7 +114,7 @@ This variable is keeped incase org-hexo not loaded.")
 
   ;; Extra package repos
   (add-to-list 'package-archives
-               '("melpa" . "https://melpa.org/packages/") t)
+               '("melpa-stable" . "https://elpa.emacs-china.org/melpa-stable/") t)
   (add-to-list 'package-archives
                '("org" . "http://orgmode.org/elpa/") t)
 
