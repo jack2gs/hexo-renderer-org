@@ -58,7 +58,7 @@ If you want to make example-block has line-number, you also need to setup `org-h
     ("css"             . "css")
     ("diff"            . "diff")
     ("dockerfile"      . "dockerfile")
-    ("emacs-lisp"      . "lisp")
+    ("elisp"           . "lisp")
     ("html"            . "xml")
     ("http"            . "http")
     ("java"            . "java")
