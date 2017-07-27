@@ -49,7 +49,7 @@
   Switch to your hexo blog directory and run:
 
   #+BEGIN_SRC sh
-    npm install https://github.com/coldnew/hexo-renderer-org#coldnew --save
+    npm install https://github.com/jack2gs/hexo-renderer-org#coldnew --save
   #+END_SRC
 
   Then restart your hexo server.
